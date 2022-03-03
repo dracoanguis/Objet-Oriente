@@ -10,7 +10,7 @@ public class Quest{
             throw new IllegalArgumentException("description should not be empty");
         }
         if (reward < 0){
-            throw new IllegalArgumentException("reward shoujd not be negative");
+            throw new IllegalArgumentException("reward should not be negative");
         }
 
         this.description = description;

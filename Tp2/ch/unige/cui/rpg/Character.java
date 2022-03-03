@@ -2,27 +2,27 @@ package ch.unige.cui.rpg;
 
 public class Character{
 	
-	public final String name;
-	private int hp;
-	private final int maxHp;
+	private final String name;
+	private int currentHP;
+	private final int maxHP;
 	private final int armor;
 	private int gold = 0;
 	private Quest currentQuest = null;
 	private boolean alive;
 
-	public Character(String name, int maxHp, int armor) throws IllegalArgumentException {
+	public Character(String name, int maxHP, int armor) throws IllegalArgumentException {
 		if(name == null ||  name.trim().isEmpty()){
 			throw new IllegalArgumentException("Name is non-valid");
 		}
-		if (maxHp <= 0){
-			throw new IllegalArgumentException("maxHp should be greater than 0");
+		if (maxHP <= 0){
+			throw new IllegalArgumentException("maxHP should be greater than 0");
 		}
 		if (armor < 0 ){
 			throw new IllegalArgumentException("There is no cursed armor in this game");
 		}
 		this.name = name;
-		this.maxHp = maxHp;
-		this.hp = maxHp;
+		this.maxHP = maxHP;
+		this.currentHP = maxHP;
 		this.armor = armor;
 		this.alive = true;
 	}
@@ -33,25 +33,25 @@ public class Character{
 		}
 
 		if (alive && (damage-this.armor) > 0) {
-			if ((this.hp - (damage-this.armor)) <= 0 ){
-				this.hp = 0;
+			if ((this.currentHP - (damage-this.armor)) <= 0 ){
+				this.currentHP = 0;
 				alive = false;
 			} else {
-				this.hp -= (damage-this.armor);
+				this.currentHP -= (damage-this.armor);
 			}
 		}
 	}
 
 	public void heal(int hp) throws IllegalArgumentException {
 		if (hp<0){
-			throw new IllegalArgumentException("restored hp should not be negative");
+			throw new IllegalArgumentException("restored currentHP should not be negative");
 		}
 
 		if (alive){
-			if ((this.hp+hp)>this.maxHp){
-				this.hp = this.maxHp;
+			if ((this.currentHP+hp)>this.maxHP){
+				this.currentHP = this.maxHP;
 			} else {
-				this.hp += hp;
+				this.currentHP += hp;
 			}
 		}
 	}
@@ -95,7 +95,7 @@ public class Character{
 		}
 
 		return ("Character Name: "+name
-				+"\nHP: "+Integer.toString(this.hp)+"/"+Integer.toString(this.maxHp)+"\tStatus: "+status
+				+"\ncurrentHP: "+Integer.toString(this.currentHP)+"/"+Integer.toString(this.maxHP)+"\tStatus: "+status
 				+"\nArmor: "+Integer.toString(this.armor)+"\tGold: "+Integer.toString(this.gold)
 				+"\nQuest: "+quest);
 	}
