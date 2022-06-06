@@ -1,0 +1,30 @@
+plugins {
+    id  'java'
+    id 'application'
+}
+
+application {
+    mainClassName = 'ch.unige.cui.game.Game'
+}
+    
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+task helloWorldTask{
+    doFirst{
+        print 'Hello, '
+    }
+    doLast{
+        print 'world.'
+    }
+}

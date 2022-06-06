@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RPGTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-05-12T11:10:08" hostname="DESKTOP-N0F7J9V" time="0.268">
+  <properties/>
+  <testcase name="doubleAttackTest:" classname="RPGTest" time="0.167"/>
+  <testcase name="watchdogTest:" classname="RPGTest" time="0.009"/>
+  <testcase name="unEquipTest:" classname="RPGTest" time="0.03"/>
+  <testcase name="SmeagolAttacksGandalfTest:" classname="RPGTest" time="0.01"/>
+  <testcase name="SauronAttacksGandalfTest:" classname="RPGTest" time="0.003"/>
+  <testcase name="armorAbsorbTest:" classname="RPGTest" time="0.003"/>
+  <testcase name="exceptionTest:" classname="RPGTest" time="0.013"/>
+  <testcase name="equipTwiceTest:" classname="RPGTest" time="0.006"/>
+  <testcase name="armor5percentTestMag:" classname="RPGTest" time="0.002"/>
+  <testcase name="armor5percentTestPhy:" classname="RPGTest" time="0.003"/>
+  <testcase name="equipTest:" classname="RPGTest" time="0.004"/>
+  <system-out><![CDATA[BeforeAll test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterEach test
+AfterAll test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

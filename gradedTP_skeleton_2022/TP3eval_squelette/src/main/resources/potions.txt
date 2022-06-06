@@ -1,0 +1,7 @@
+Mana 99 15
+Health 70 7
+Mana 30 6
+Health 100 10
+Health 5 1
+Mana 20 7
+Mana 30 12

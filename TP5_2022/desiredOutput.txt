@@ -1,0 +1,241 @@
+Initialized native services in: /home/od/.gradle/native
+Initialized jansi services in: /home/od/.gradle/native
+The client will now receive all logging from the daemon (pid: 26518). The daemon log file: /home/od/.gradle/daemon/7.4.1/daemon-26518.out.log
+Starting 2nd build in daemon [uptime: 2 mins 4.917 secs, performance: 100%, non-heap usage: 16% of 256 MiB]
+Using 8 worker leases.
+Not watching /mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022 since the file system is not supported
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022/settings.gradle'.
+Projects loaded. Root project using build file '/mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022/build.gradle'.
+Included projects: [root project 'TP5_2022']
+
+> Configure project :
+Evaluating root project 'TP5_2022' using build file '/mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022/build.gradle'.
+All projects evaluated.
+Selected primary task 'build' from project :
+Selected primary task 'run' from project :
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':startScripts', task ':distTar', task ':distZip', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build', task ':run']
+Tasks that were excluded: []
+:compileJava (Thread[Execution worker for ':',5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Skipping task ':compileJava' as it is up-to-date.
+:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.548 secs.
+:processResources (Thread[Execution worker for ':',5,main]) started.
+
+> Task :processResources UP-TO-DATE
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+Skipping task ':processResources' as it is up-to-date.
+:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.08 secs.
+:classes (Thread[Execution worker for ':',5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:jar (Thread[Execution worker for ':',5,main]) started.
+
+> Task :jar UP-TO-DATE
+Caching disabled for task ':jar' because:
+  Build cache is disabled
+Skipping task ':jar' as it is up-to-date.
+:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.237 secs.
+:startScripts (Thread[Execution worker for ':',5,main]) started.
+
+> Task :startScripts UP-TO-DATE
+Caching disabled for task ':startScripts' because:
+  Build cache is disabled
+Skipping task ':startScripts' as it is up-to-date.
+:startScripts (Thread[Execution worker for ':',5,main]) completed. Took 0.049 secs.
+:distTar (Thread[Execution worker for ':',5,main]) started.
+
+> Task :distTar UP-TO-DATE
+Caching disabled for task ':distTar' because:
+  Build cache is disabled
+Skipping task ':distTar' as it is up-to-date.
+:distTar (Thread[Execution worker for ':',5,main]) completed. Took 0.048 secs.
+:distZip (Thread[Execution worker for ':',5,main]) started.
+
+> Task :distZip UP-TO-DATE
+Caching disabled for task ':distZip' because:
+  Build cache is disabled
+Skipping task ':distZip' as it is up-to-date.
+:distZip (Thread[Execution worker for ':',5,main]) completed. Took 0.023 secs.
+:assemble (Thread[Execution worker for ':',5,main]) started.
+
+> Task :assemble UP-TO-DATE
+Skipping task ':assemble' as it has no actions.
+:assemble (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:compileTestJava (Thread[Execution worker for ':',5,main]) started.
+
+> Task :compileTestJava NO-SOURCE
+Skipping task ':compileTestJava' as it has no source files and no previous output files.
+:compileTestJava (Thread[Execution worker for ':',5,main]) completed. Took 0.029 secs.
+:processTestResources (Thread[Execution worker for ':',5,main]) started.
+
+> Task :processTestResources NO-SOURCE
+Skipping task ':processTestResources' as it has no source files and no previous output files.
+:processTestResources (Thread[Execution worker for ':',5,main]) completed. Took 0.016 secs.
+:testClasses (Thread[Execution worker for ':',5,main]) started.
+
+> Task :testClasses UP-TO-DATE
+Skipping task ':testClasses' as it has no actions.
+:testClasses (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:test (Thread[Execution worker for ':',5,main]) started.
+
+> Task :test NO-SOURCE
+Skipping task ':test' as it has no source files and no previous output files.
+:test (Thread[Execution worker for ':',5,main]) completed. Took 0.015 secs.
+:check (Thread[Execution worker for ':',5,main]) started.
+
+> Task :check UP-TO-DATE
+Skipping task ':check' as it has no actions.
+:check (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:build (Thread[Execution worker for ':',5,main]) started.
+
+> Task :build UP-TO-DATE
+Skipping task ':build' as it has no actions.
+:build (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:run (Thread[Execution worker for ':',5,main]) started.
+
+> Task :run
+Caching disabled for task ':run' because:
+  Build cache is disabled
+Task ':run' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Starting process 'command '/home/od/Java17/jdk-17.0.2+8/bin/java''. Working directory: /mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022 Command: /home/od/Java17/jdk-17.0.2+8/bin/java -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -cp /mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022/build/classes/java/main:/mnt/c/Users/odabr/OneDrive/Documents/PhD/teaching/OO/12x003/TP/TP5/TP5_2022/build/resources/main ch.unige.cui.rpg.Game
+Successfully started process 'command '/home/od/Java17/jdk-17.0.2+8/bin/java''
+
+
+
+>>>>>>>>>>> START of GAME 
+
+
+
+1: Holy grail quest,999999
+2: Kill the dragon,6666
+3: Save the princess,5555
+4: Save the princess,5555
+5: Save the princess,5555
+6: Tame a wild bear,333
+7: Tame a wild wolf,222
+8: Tame a wild boar,111
+9: A very boaring quest,0
+10: Learn the APL programming language,10000
+11: Learn the Lisp programming language,1000
+12: Learn the Fortran programming language,1000
+13: Learn the Cobol programming language,100
+questlog size=1
+Added Holy grail quest to questlog.
+questlog size=1
+Added Kill the dragon to questlog.
+questlog size=2
+Added Save the princess to questlog.
+questlog size=3
+I already have this quest in my questlog!
+questlog size=3
+I already have this quest in my questlog!
+questlog size=3
+Added Tame a wild bear to questlog.
+questlog size=4
+Added Tame a wild wolf to questlog.
+questlog size=5
+Added Tame a wild boar to questlog.
+questlog size=6
+Added A very boaring quest to questlog.
+questlog size=7
+Added Learn the APL programming language to questlog.
+questlog size=8
+Added Learn the Lisp programming language to questlog.
+questlog size=9
+Added Learn the Fortran programming language to questlog.
+questlog size=10
+Quest log is full !
+
+
+ Starting fight with dragon...
+Player : name = Lancelot, level = 1, maxHP = 100, currentHP=100, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+
+Character state BEFORE damage:
+name = Lancelot, level = 1, maxHP = 100, currentHP=100, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+a dragon attacks, inflicting 75 phyical, 33 magical, and 99 fire damage ...
+
+Character state AFTER damage:
+name = Lancelot, level = 1, maxHP = 100, currentHP=62, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+A (very) powerful priest heals player by an insane amount...
+
+after healing wave :
+name = Lancelot, level = 1, maxHP = 100, currentHP=100, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+Dragon finally kills Lancelot by inflicting 6666 fire and physical damage ...
+
+AFTER FATAL dragon attack:
+name = Lancelot, level = 1, maxHP = 100, currentHP=0, isAlive = false, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+The (very) powerful priest tries to heal Lancelot (again) but...
+Cannot heal a dead player!
+
+AFTER POSTMORTEM healing tentative:
+name = Lancelot, level = 1, maxHP = 100, currentHP=0, isAlive = false, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Learn the Fortran programming language, reward = 1000
+
+
+
+END of GAME <<<<<<<<<<< 
+
+
+
+
+
+>>>>>>>>>> STARTING NEW GAME ...
+
+
+ Starting fight with ghoul mage...
+
+
+ main player:name = Parseval, level = 1, maxHP = 100, currentHP=100, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Quest log is empty!, reward = 0
+
+ghoul state after being wounded : name = Bonechewer, level = 1, maxHP = 100, currentHP=100, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 100
+
+ghoul state after being healed : name = Bonechewer, level = 1, maxHP = 100, currentHP=49, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 100
+
+Player state after ghoul casts spell on him : name = Parseval, level = 1, maxHP = 100, currentHP=65, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Quest log is empty!, reward = 0
+
+Ghoul state after ghoul casting spell : name = Bonechewer, level = 1, maxHP = 100, currentHP=49, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 65
+
+ghoul state after being wounded (physical) : name = Bonechewer, level = 1, maxHP = 100, currentHP=100, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 65
+A (very) powerful priest heals player by an insane amount...
+
+Player stated after being healed : name = Parseval, level = 1, maxHP = 100, currentHP=100, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Quest log is empty!, reward = 0
+ghoul's remaining mana : 65 and ghoul attack is:Damage: physical = 0, 35, 0
+ghoul's remaining mana : 30 and ghoul attack is:Damage: physical = 0, 35, 0
+ghoul's remaining mana : 30 and ghoul attack is:Damage: physical = 0, 0, 0
+
+Player state after 3 ghoul attacks (3*35 dmg) : name = Parseval, level = 1, maxHP = 100, currentHP=30, isAlive = true, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Quest log is empty!, reward = 0
+
+Ghoul state after 3 attacks and NO mana regen :name = Bonechewer, level = 1, maxHP = 100, currentHP=100, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 30
+
+Player state after final attack: name = Parseval, level = 1, maxHP = 100, currentHP=0, isAlive = false, sensitivities: is sensitive to dmg of type(s) : physical, magical, fire, , gold=10, current quest=description = Quest log is empty!, reward = 0
+
+Ghoul state after final attack and mana regen : name = Bonechewer, level = 1, maxHP = 100, currentHP=100, sensitivities: is sensitive to dmg of type(s) : magical, fire, , mana = 65
+
+
+
+END of GAME <<<<<<<<<<< 
+
+
+
+:run (Thread[Execution worker for ':',5,main]) completed. Took 0.919 secs.
+producer locations for task group 0 (Thread[Execution worker for ':',5,main]) started.
+producer locations for task group 0 (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.4.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 4s
+7 actionable tasks: 1 executed, 6 up-to-date
+Some of the file system contents retained in the virtual file system are on file systems that Gradle doesn't support watching. The relevant state was discarded to ensure changes to these locations are properly detected. You can override this by explicitly enabling file system watching.

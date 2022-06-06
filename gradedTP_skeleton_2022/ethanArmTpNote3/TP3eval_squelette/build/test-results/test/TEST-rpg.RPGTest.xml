@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rpg.RPGTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-06-02T09:42:28" hostname="DESKTOP-N0F7J9V" time="0.27">
+  <properties/>
+  <testcase name="filtByManaTest" classname="rpg.RPGTest" time="0.136"/>
+  <testcase name="copyABTest" classname="rpg.RPGTest" time="0.018"/>
+  <testcase name="copyAB2ndTest" classname="rpg.RPGTest" time="0.004"/>
+  <testcase name="createManaPotionStreamTest" classname="rpg.RPGTest" time="0.06"/>
+  <testcase name="createHPStreamTest" classname="rpg.RPGTest" time="0.027"/>
+  <testcase name="filtByPriceTest" classname="rpg.RPGTest" time="0.004"/>
+  <testcase name="readFileTest" classname="rpg.RPGTest" time="0.012"/>
+  <system-out><![CDATA[BeforeAll test
+AfterEach test
+AfterEach test
+AfterEach test
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+AfterEach test
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+AfterEach test
+AfterEach test
+1: Mana 99 15
+2: Health 70 7
+3: Mana 30 6
+4: Health 100 10
+5: Health 5 1
+6: Mana 20 7
+7: Mana 30 12
+AfterEach test
+AfterALl test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

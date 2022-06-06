@@ -84,7 +84,7 @@ public class Character{
 	}
 
 	public String toString(){
-		String status ="dead";
+		String status = "dead";
 		if (alive){
 			status = "alive";
 		}
@@ -94,10 +94,9 @@ public class Character{
 			quest = this.currentQuest.toString();
 		}
 
-		return ("Character Name: "+name
-				+"\ncurrentHP: "+Integer.toString(this.currentHP)+"/"+Integer.toString(this.maxHP)+"\tStatus: "+status
-				+"\nArmor: "+Integer.toString(this.armor)+"\tGold: "+Integer.toString(this.gold)
-				+"\nQuest: "+quest);
+		return (String.format("Character  Name: %s\ncurrentHP: %d/%d\tStatus %s\nArmor: %d\tGold: %d\nQuest: %s",
+				this.name,this.currentHP,this.maxHP,status,this.armor,this.gold,quest));
+
 	}
 
 }

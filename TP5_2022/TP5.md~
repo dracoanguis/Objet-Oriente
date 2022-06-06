@@ -1,0 +1,127 @@
+---
+title: "TP5: héritage et polymorphisme"
+documentclass: article
+papersize: a4
+fontsize: 12pt
+header-includes:
+  - \usepackage{listings}
+  - \usepackage{xcolor}
+  - \usepackage{hyperref}
+  - \usepackage{url}
+  - \usepackage{subcaption}
+output:
+  html_document:
+    number_sections: true
+  pdf_document:
+    number_sections: true
+---
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+\section{Introduction}
+Les objectifs de ce TP sont de mettre en pratique le concept d'*héritage* en Java. Comme cela vous a été expliqué en cours, il est rarement nécessaire d'utiliser l'héritage. On peut souvent avantageusement le remplacer par l'utilisation d'interfaces pour créer des relations de sous-typage. Néanmoins, il est utile de comprendre le concept, notamment pour comprendre du code déjà existant qui le met en oeuvre. Continuez à utiliser gradle pour compiler et exécuter votre programme. Il faut donc respecter les conventions de gradle que nous avons apprise lors du TP précédent et créer un script build.gradle. Ce dernier sera très similaire à celui du TP précédent, vous pouvez donc le reprendre et le modifier.
+
+
+
+
+
+\section{Héritage et sous-classement}
+\subsection{Exercice 1}
+Dans cet exercice, il s'agit de créer de nouvelles classes héritant d'une super-classe générique ''personnage'' (``GameCharacter``). Cette classe ne contient que les champs les plus génériques, que tout personnage doit avoir, à savoir:
+
+- un nom (name) qui peut servir d'identifiant unique car on ne permet pas à deux personnages d'avoir le même nom
+- un niveau (level)
+- un nombre de points de de vie max (max. health points)
+
+Ensuite, on aura une classe ``Humanoid``, ``Ghoul`` et ``Orc`` (libre à vous d'en inventer d'autres ...).
+Pour l'exercice, ces classes ont les charactéritiques suivantes. 
+
+Humanoide:
+
+- est mortel: c'est à dire que si ses points de vie arrivent à 0, le personnage est mort et ne peut plus effectuer aucune action, e.g., ne peut attaquer, ne peut être soingé, ne peut démarrer de quête etc.
+- est sensible à tous les types de dégats (cf. classe Damage, i.e., physical, magical, fire).
+
+Ghoule:
+
+- est mort-vivant (undead): si les dégats subis lui ferait atteindre 0 pts de vie, alors le nombre max. de pts de vie est réduit de moitié jusqu'à arriver à 1 pour des attaques répétées (n'atteint jamais 0).
+- n'est pas sensible aux dégats physiques, mais seulement au dégats magique et feu.
+
+Finalement, implémenter des classes héritant de ces dernières, par exemple:
+
+HumanWarrior :
+
+- humanoide
+- le fait d'etre un guerrier donne des points de **rage** utilisable pour des attaques spéciales (pas nécessaire d'implémentre la logique de combats ici, juste posséder ce champ).
+
+HumanMage :
+
+- humanoide
+- possède des points de mana pour des attaques magiques.
+
+
+GhoulMage :
+
+- Ghoule
+- possède des points de mana (même principe que le mage humain)
+
+Si vous voulez em inventer d'autres comme exercice supplémentaire ...
+
+OrcWarrior:
+ 
+ - A vous de voir ...
+
+
+
+
+
+%% TODO  DELETE this section after finishing new one
+
+Dans cet exercice, il s'agit de transformer les interfaces ``Equipement`` et ``Protection`` (cf. TP3) en classe et sous-classe. On va considérer qu'on a une classe ``Equipement`` qui *généralise* une classe ``Protection`` (ou, dis dans "l'autre sens" que ``Protection`` *spécialise* ``Equipement``) comme indiqué dans le diagramme UML donné en Figure 1.
+
+%% END TODO
+
+
+
+
+**Remarques:**
+
+- Vous aurez besoin d'utiliser l'instruction ``super()`` pour invoquer le constructeur de d'une super-classe.
+- Nous allons utiliser l'héritage ici notamment pour éviter d'écrire du code redondant: pensez au méchanisme d'héritage qui justement permet aux sous-classes "d'hériter" des champs et méthodes de la classe mère.
+- On n'a pas d'héritage multiple en Java, mais il y a la transitivité, i.e., une classe C qui hérite d'une classe B qui elle-même hérite d'une classe A, hérite aussi de la classe A par transitivité. (Comme sur la Figure 1, nous avons l'héritage "simple" à travers une "branche" dont la racine est la classe mère ``Object``).
+
+
+\section{Exercice 2}
+Réaliser le diagramme UML de l'exercice précédent. Déposez le dans un format d'image matricielle (e.g., .png, .jpg, etc.) ou diagramme vectoriel (e.g., .svg, .pdf) mais pas un format text.
+
+\section {Rendu}
+
+Ce TP n'est pas noté. Néanmoins, nous vous demandons de le déposer sur Moodle via le widget prévu à cet effet. Archivez *votre projet tout entier* dans **un seul** fichier .zip avec la convention de nommage suivante: **prenomNomTP5.zip**. 
+
+N'oubliez pas de toujours inclure votre script **build.gradle**, bien évidemment (puisque vous déposez votre projet tout entier dans une archive zip).

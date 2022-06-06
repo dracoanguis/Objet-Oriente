@@ -16,6 +16,6 @@ public class Game{
 		System.out.println(Arthur.toString());
 		Arthur.accomplishQuest();
 		System.out.println(Arthur.toString());
-		Arthur.failQuest();
+
 	}
 }

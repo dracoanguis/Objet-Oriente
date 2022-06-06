@@ -1,0 +1,21 @@
+plugins {
+    id  'java'
+    id 'application'
+}
+
+application {
+    mainClassName = 'ch.unige.cui.rpg.Game'
+}
+    
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
+}
+
+test {
+    useJUnitPlatform()
+}
+

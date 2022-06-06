@@ -1,0 +1,16 @@
+ch/unige/cui/rpg/PlayerClass.java
+ ch.unige.cui.rpg.PlayerClass
+ch/unige/cui/rpg/CharProfile.java
+ ch.unige.cui.rpg.CharProfile
+ch/unige/cui/rpg/Armor.java
+ ch.unige.cui.rpg.Armor
+ch/unige/cui/rpg/Damage.java
+ ch.unige.cui.rpg.Damage
+ch/unige/cui/rpg/Item.java
+ ch.unige.cui.rpg.Item
+ch/unige/cui/rpg/Player.java
+ ch.unige.cui.rpg.Player
+ch/unige/cui/rpg/DmgType.java
+ ch.unige.cui.rpg.DmgType
+ch/unige/cui/rpg/Equipment.java
+ ch.unige.cui.rpg.Equipment

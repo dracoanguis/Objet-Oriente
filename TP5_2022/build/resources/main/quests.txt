@@ -1,0 +1,13 @@
+Holy grail quest,999999
+Kill the dragon,6666
+Save the princess,5555
+Save the princess,5555
+Save the princess,5555
+Tame a wild bear,333
+Tame a wild wolf,222
+Tame a wild boar,111
+A very boaring quest,0
+Learn the APL programming language,10000
+Learn the Lisp programming language,1000
+Learn the Fortran programming language,1000
+Learn the Cobol programming language,100

@@ -18,6 +18,6 @@ public class Quest{
     }
 
     public String toString(){
-        return ("Description: "+this.description+"\nReward: "+Integer.toString(this.reward)+" Gold");
+        return (String.format("Description: %s\nReward: %d Gold",this.description,this.reward));
     }
 }

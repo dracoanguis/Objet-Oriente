@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RPGTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-06T12:22:55" hostname="DESKTOP-N0F7J9V" time="0.187">
+  <properties/>
+  <testcase name="getMagicalTest()" classname="RPGTest" time="0.187"/>
+  <system-out><![CDATA[BeforeAll test
+BeforeEach test
+Test Damage getter method for magical damages.
+AfterEach test
+AfterALl test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
