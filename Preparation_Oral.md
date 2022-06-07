@@ -8,9 +8,9 @@ Ce document est destinée a servire de repère dans les révisions des sujets d'
 
 Chaque thème requis a l'examen est abordée de manière seule puis ouvert vers la généralité du cours.
 
-## Enumérations
-
 ---
+
+## Enumérations
 
 ### Définition d'énumération
 
@@ -71,17 +71,25 @@ DoorState open( DoorState current ) {
 
 ## Généricité et varience
 
+---
+
 ## Héritage et aggrégation
+
+---
 
 ## Héritage et Polymorphisme
 
+---
+
 ## Héritage: redéfinition des méthodes
+
+---
 
 ## Identité et Egalité
 
-## Lambda Expressions
-
 ---
+
+## Lambda Expressions
 
 En *java*, il existe plusieurs objets annonymes, les *Lambda Expressions* et les *Classes Annonymes*.
 
@@ -193,19 +201,90 @@ Un autre point particulièrement utils des *lambda expressions* en *java* est qu
 
 ## Mutabilité et immutabilité
 
+### Concept de mutabilité et immutabilité
+
+La majorité des langages orienté objets ont une approche *mutable*, c'est-à-dire que les objets sont modifiable après intanciation. Par exemple, dans un tel langage, les variables sont de base modifiable.
+
+A l'inverse, dans l'approche *immutable* les objets ne peuvent être modifié après avoir été instancié, dans un tel langage on considère qu'il n'y a pas de variable et uniquement des constantes.
+
+Dans la majorité des langages *mutable* et *immutable* il existe un mot-clef qui permet de rendre un objet *mutable* *immutable* et inversement. Par exemple, en *java* qui est un langage *mutable* ce mot-clef est `final`. Un exemple de l'approche *immutable* sera le *scala* et donc un objet *mutable* serait spécifié avec le mot-clef `var` et un objet *immutable* avec `val`.
+
+On dit qu'un objet est *immutable* uniquement si chacun de ses attributs est *immutable*. Par exemple, des points dans un repère entier:
+
+```java
+public class PointMutable {
+    int x;
+    int y;
+
+    public PointMutable(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+
+public class PointImmutable {
+    final int x;
+    final int y;
+
+    public PointImmutable(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+
+Le première version est *mutable* et la deuxième version *immutable* ce qui implique que on as le droit d'écrire:
+
+```java
+var pm = new PointMutable(1,1);
+var pi = new PointImmutable(2,3);
+
+pm.x = 2;
+pm.y = 3;
+```
+
+Mais qu'on ne peut écrire:
+
+```java
+pi.x = 1; //ou
+pi.y = 1;
+```
+
+Comme on peut le voir ici on n'as utilisé le motclef `final` seulement sur des attribut objet de class mais ce n'est pas ça seul utilisation. Il peut aussi être utilisé devant une méthode, il indique alors que celle-ci n'est pas redéfinissable en cas d'héritage de class.
+
+### Entité et valeur
+
+En général, les langages permettant de faire de la *mutabilité* et de l'*immutabilité*, ont établie des cas quand les utilisé pour des objets en particulier. On distingue alors deux types d'objets: les *entity objects*, les *entitées*, et les *value objects*, *objet-valeures*.
+
+Un *value object* est un objet purement définie par la valeur qu'il possède, un tel objet ne néccéssite donc pas d'être *mutable*. En effet, une modification de celui-ci entrainerais, a un sens conceptuel, la création d'un objet différent ainsi autant en créé un nouveau directement et considéré ces objets comme *immutable*. Par exemple, un *value object* pouraît être un point, puisqu'un est uniquement définie par sa valeur, on décrirais alors cette objet comme la classe `PointImmutable` vue plus haut.
+
+Une *entité* est un objet qui n'est pas défini par la valeur de ses champs et peut donc avoir ses valeurs qui évolue au cours du temps. Les deux approches sont possibles sur cette objet, *mutable* et *immutable*. Il est fortement recommandé d'utiliser ici encore une approche *immutable* mais il est aussi logique dans certains cas d'utiliser une version *mutable*. Un exemple d'un tel objet serait une personne, une réservation ou bien encore un compte en banque.
+
+En général, peut importe le type d'objet au quel on as affaire on part du principe que celui-ci est *immutable* pour la simple raisons qu'il est beaucoup plus simple de faire l'opération *immutable* $\rightarrow$ *mutable* que l'opération inverse.
+
+---
+
 ## Polymorphisme et interfaces
+
+---
 
 ## Principe de substitution de Liskov
 
+---
+
 ## Références et construction
+
+---
 
 ## Références et passage d'argument
 
+---
+
 ## Références, méthodes et mutabilité
 
-## Visibilité et Contrôle d'accès
-
 ---
+
+## Visibilité et Contrôle d'accès
 
 ### Principe et mots-clefs de la visibilité et du Contrôle d'accès
 
@@ -242,3 +321,5 @@ Ces méthodes d'accès sont appellées *getter*, en français *accesseur*, et le
 En général, il est désirable que ces *getter* et *setter* retournent des *intefaces* pour cacher les détails d'implémentation, par exemple si l'on décide de changer le type de retour d'un *getter*. Si on change d'un `int` à un `long`, ci on récupère souvent la valeur on peut se retrouver a devoir changer plusieurs centaines lignes de code pour peut de choses. Alors que si, par defaut, ils retournaient une *interface*, il suffirait de modifier certaines méthode de la dites *interface*.
 
 Les contraintes liés aux *accesseurs* restent des problème de design de système, c'est-à-dire que si on écrit une API qui va être utilisé de manière inconnu il est normal de mettre beaucpoup d'accesseurs, mais si on écrit quelque choses de très spécifique et que l'on sait exactement de quel manière on vas l'utilisé il ne fait aucun sens de définir des accesseur a tord et à travers.
+
+---
