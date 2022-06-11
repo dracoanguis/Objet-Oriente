@@ -87,6 +87,10 @@ DoorState open( DoorState current ) {
 
 ## Identité et Egalité
 
+### Concepts d'Identité et d'Egalité
+
+L'*Identité* d'un objet est 
+
 ---
 
 ## Lambda Expressions
