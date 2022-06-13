@@ -89,7 +89,16 @@ DoorState open( DoorState current ) {
 
 ### Concepts d'Identité et d'Egalité
 
-L'*Identité* d'un objet est 
+L'*Identité* d'un objet est sa personne propre, c'est-à-dire en général ses données, son espaces mémoire, sa location, etc. En général, on représente l'identité d'un objet par son pointeur.
+
+L'*égalité* entre deux objets peut être valider, représenter par plusieurs choses. La première est une égalité d'*Identité*, c'est-à-dire si deux objets sont en fait le même.
+La deuxième est une *égalité* de valeurs, on la définie généralement par l'égalité de valeurs entre tout les champs de l'objets, le type des objets comparé est généralement le même enfin cela dépend si on fait une *égalité* total ou partielle. De plus, une *égalité* d'*identité* implique toujours toutes formes d'*égalités*.
+
+### Différents types d'objets
+
+Ces différentes notions d'*égalité* implique différents type théorique d'objets, ici on en considère deux: les *entity object* ou *entités* et les *values object* ou *objet valeur*.
+
+Les *entités* sont des objets n'ont définie par leur champs, c'est-à-dire que 
 
 ---
 
@@ -254,7 +263,7 @@ pi.x = 1; //ou
 pi.y = 1;
 ```
 
-Comme on peut le voir ici on n'as utilisé le motclef `final` seulement sur des attribut objet de class mais ce n'est pas ça seul utilisation. Il peut aussi être utilisé devant une méthode, il indique alors que celle-ci n'est pas redéfinissable en cas d'héritage de class.
+Comme on peut le voir ici on n'as utilisé le motclef `final` seulement sur des attribut objet de class mais ce n'est pas ça seul utilisation. Il peut aussi être utilisé devant une méthode, il indique alors que celle-ci n'est pas redéfinissable en cas d'héritage de class. On peut aussi le placer sur une classe, ce qui implique alors que cette clase ne peut plus être étendue, héritée.
 
 ### Entité et valeur
 
