@@ -96,9 +96,43 @@ La deuxième est une *égalité* de valeurs, on la définie généralement par l
 
 ### Différents types d'objets
 
-Ces différentes notions d'*égalité* implique différents type théorique d'objets, ici on en considère deux: les *entity object* ou *entités* et les *values object* ou *objet valeur*.
+Ces différentes notions d'*égalité* implique différents type théorique d'objets, ici on en considère deux: les *entity object* ou *entités* et les *value-object* ou *objet-valeur*.
 
-Les *entités* sont des objets n'ont définie par leur champs, c'est-à-dire que 
+Les *entités* sont des objets non-définie par leur champs, c'est-à-dire que leur champs ne constituent pas leur *identité*. Pour illustrer un tel objet on peut prendre une Personne. On peut ici penser que l'*identité* de l'objet est un identifiant unique propre a chacun.
+
+Les *objet-valeurs* sont a l'inverse des précédents, des objets dont l'*identité* peut être entièrement définie par la valeurs de leur champs. On peut ici, par exemple considérer un objet Point, celui-ci est entièrement définie par sa position dans l'espace, il est donc logique de considérer que deux points au mêmes endroit sont les mêmes.
+
+### Les méthodes d'égalité en *java*
+
+En *java* ils existent deux méthodes générales pour tester l'égalité entre objet. La première est par l'opérateur `==` et la deuxième est la méthode du type racine `object.equal(object)`.
+
+Par défaut les deux opèrent de la même manière, elles testent l'égalité entre les référence aux objets. Mais la méthode `equals` peut-être overrider, par exemple la remplacer par une égalité sur les champs tel que celle définie pour les *objets-valeurs*.
+
+### Cas théorique d'égalité partielle: objet interfacé
+
+On peut imaginer un cas théorique intéréssant ou pour certaine raisons on voudrait que notre objet soit égaux sur certain de leur champs mais ne soit pas du même type. Par exemple:
+
+``` java
+public interface vivant {
+    public long id;
+    public String name;
+}
+public class chat implements vivant {
+    public final long id;
+    public final String name;
+
+    @Override
+    public boolean equals(vivant v){
+        return name.equals(v.name);
+    }
+}
+public class humains implements vivant {
+    public final long id;
+    public final String name;
+}
+```
+
+Dans cette exemple, il est donc possible qu'un `chat` et un `humain`soit égaux.
 
 ---
 
@@ -274,6 +308,12 @@ Un *value object* est un objet purement définie par la valeur qu'il possède, u
 Une *entité* est un objet qui n'est pas défini par la valeur de ses champs et peut donc avoir ses valeurs qui évolue au cours du temps. Les deux approches sont possibles sur cette objet, *mutable* et *immutable*. Il est fortement recommandé d'utiliser ici encore une approche *immutable* mais il est aussi logique dans certains cas d'utiliser une version *mutable*. Un exemple d'un tel objet serait une personne, une réservation ou bien encore un compte en banque.
 
 En général, peut importe le type d'objet au quel on as affaire on part du principe que celui-ci est *immutable* pour la simple raisons qu'il est beaucoup plus simple de faire l'opération *immutable* $\rightarrow$ *mutable* que l'opération inverse.
+
+### Cas d'immutabilité: le calcul cache
+
+On peut imaginé des cas où un objet est de type *valeur* et est donc immutable sur ses champs qualificatif mais possède des champs immutables cahé non-définie.
+
+Par exemple, on peut prendre un champs de vecteurs qui est lui définie sur un array de vecteurs immutables, et par exemple on veut calculer son dot product or sur un grand champ c'est une opération côuteuse donc on ne le calcul pas s'il n'est pas demandé et lorsqu'il est demandé on ne le calcul qu'une fois et on le place dans un champs immutable prédéfinie, car il est définie sur des champs qui sont eux-mêmes immutables.
 
 ---
 
